@@ -1,0 +1,94 @@
+.about-cont {
+    @include displayFlex(center, space-around);
+    flex-direction: column;
+    padding: 0 0 100px;
+    flex-wrap: wrap;
+
+    .about-details {
+        @include displayFlex(space-around, flex-start);
+        flex-wrap: wrap;
+        gap: 40px;
+        width: 1000px;
+        .know-me {
+            @include displayFlex(space-around, flex-start);
+            flex-direction: column;
+            width: 400px;
+            gap: 25px;
+            text-align: justify;
+            
+            .bold {
+                font-weight: bold;
+                color: rgb(75, 73, 73);
+            }
+
+            .inline-social {
+                color: $primaryColor;
+                font-weight: bold;
+            }
+            
+            .button {
+                padding: 12px 40px;
+                background-color: $primaryColor;
+                color: $white;
+                border-radius: 5px;
+                font-weight: 700;
+                text-decoration: none;
+                border: 1px solid $primaryColor;
+
+                &:hover {
+                    background-color: $white;
+                    color: $primaryColor;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: .1s ease;
+                }
+                
+            }
+        }
+        
+        .my-skills {
+            @include displayFlex(center, flex-start);
+            flex-direction: column;
+            width: 400px;
+            gap: 25px;
+            
+            // :first-child {
+            //     margin-left: 15px;
+            // }
+            
+            .just-skills {
+                @include displayFlex(flex-start, flex-start);
+                flex-wrap: wrap;
+                gap: 10px;
+                // border: 1px solid red;
+                width: 500px;
+                padding: 0;
+            }
+
+            .skill {
+                padding: 7px 10px;
+                background-color: darkgrey;
+                color: $white;
+                // margin: 15px 0 0 15px;
+                border-radius: 3px;
+            }
+            
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: 700px) {
+    .about-cont {
+        padding: 7vw;
+        flex-direction: column;
+
+        .about-details {
+            width: 100%;
+            .know-me {
+                margin: 0;
+            }
+        }
+    }
+}

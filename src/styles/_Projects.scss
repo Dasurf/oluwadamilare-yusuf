@@ -1,0 +1,36 @@
+@import "./About";
+
+.project-cont {
+    @extend .about-cont;
+    @extend .section-title;
+    background-color: $dark-grey;
+    color: $white;
+    // width: 1240px;
+    margin: 0 auto;
+    border-radius: 10px;
+    
+    
+    .project {
+        @extend .about-details;
+        padding: 50px 0;
+        @include displayFlex(space-around, center);
+
+        .project-image {
+            @extend .my-skills;
+            border-radius: 5px;
+        }
+
+        .project-desc {
+            @extend .know-me;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .project-cont {
+        
+        .project {
+            padding: 20px;
+        }
+    }
+}

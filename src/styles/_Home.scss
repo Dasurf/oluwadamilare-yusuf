@@ -1,0 +1,82 @@
+@import "./variables";
+
+.home-cont {
+    @include displayFlex(center, center);
+    position: relative;
+    flex-direction: column;
+    margin-top: 100px;
+    height: 100vh;
+    width: 100%;
+    background-image: url("/src/assets/home_wall.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $white;
+    font-family: $fontPoppins;
+    gap: 50px;
+    text-align: center;
+
+    .home-btn {
+        @extend .home-button;
+    }
+
+    h1 {
+        font-size: 48px;
+        padding: 0 15px;
+
+        &:hover {
+            text-shadow: 0 0 30px $white;
+            transition: .4s ease;
+            cursor: pointer;
+        }
+    }
+
+    h3 {
+        width: 60vw;
+
+        &:hover {
+            text-shadow: 0 0 30px $white;
+            transition: .2s ease;
+            cursor: pointer;
+        }
+    }
+
+    .social-side {
+        background-color: $white;
+        position: absolute;
+        left: 0;
+        top: 150px;
+        padding: 10px 5px;
+        @include displayFlex(space-around, space-between);
+        flex-direction: column;
+
+        a {
+            background-color: $white;
+            width: 50px;
+            height: 50px;
+
+            &:hover {
+                background-color: #bda8e9;
+                border-radius: 3px;
+            }
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .home-cont {
+        h1 {
+            font-size: 32px;
+        }
+
+        .social-side {
+            display: none;
+        }
+    }
+}

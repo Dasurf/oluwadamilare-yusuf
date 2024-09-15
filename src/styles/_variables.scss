@@ -1,0 +1,56 @@
+// reusable mixins
+@mixin displayFlex($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+
+// simple variables
+$primaryColor: #7843e9;
+$white: #f5efef;
+$fontPoppins: Poppins, sans-serif;
+$red: red;
+$normal-white: white;
+$componentBackground: #e8e8e8;
+$dark-grey: #161515;
+
+
+// the short purple underline in titles
+.title-design {
+    padding: 3px;
+    border-radius: 3px;
+    background-color: $primaryColor;
+    width: 35px;
+}
+
+.home-button {
+    color: $white;
+    text-decoration: none;
+    background-color: $primaryColor;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 700;
+
+    &:hover {
+        background-color: $white;
+        color: $primaryColor;
+        transition: .1s ease-in;
+    }
+}
+
+.general-btn {
+    padding: 12px 30px;
+    color: $primaryColor;
+    background-color: $white;
+    border: 1px solid $primaryColor;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+        background-color: $primaryColor;
+        color: $white;
+        transition: .2s ease;
+    }
+}

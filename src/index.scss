@@ -1,0 +1,29 @@
+@import 
+"/src/App", 
+"./styles/About", 
+"./styles/Contact", 
+"./styles/Home", 
+"./styles/Projects",
+"./styles/Navbar",
+"./styles/TopDescriptions",
+"./styles/Footer",
+"./styles/variables";
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    // min-width: 100%;
+    position: relative;
+    font-family: Poppins, sans-serif;
+}
+
+
