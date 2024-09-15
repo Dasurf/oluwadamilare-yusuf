@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import webIcon from "../assets/dasurf.ico"
-import openMenu from "../assets/menu.svg"
-import closeMenu from "../assets/close.svg"
+import webIcon from "/static/dasurf.ico"
+import openMenu from "/static/menu.svg"
+import closeMenu from "/static/close.svg"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

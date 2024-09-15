@@ -8,7 +8,7 @@ export default function Home({socials}) {
         <a data-aos="zoom-out" className='home-btn' href="./Projects.jsx">PROJECTS</a>
         <section data-aos="zoom-out" className='social-side'>
           {socials.map(social => (
-            <a data-aos="zoom-out" href={`https://www.${social.userProfile}`} target='_blank' key={social.id}><img src={`/src/assets/${social.icon}`} alt={social.alt}/></a>
+            <a data-aos="zoom-out" href={`https://www.${social.userProfile}`} target='_blank' key={social.id}><img src={`/static/${social.icon}`} alt={social.alt}/></a>
           ))}
         </section>
     </div>

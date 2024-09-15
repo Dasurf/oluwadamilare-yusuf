@@ -12,7 +12,7 @@ export default function Footer ({socials}) {
                 <h3>SOCIAL</h3>
                 <div className='link-cont'>
                     {socials.map(social => (
-                    <a href={`https://www.${social.userProfile}`} target='_blank' key={social.id}><img src={`/src/assets/${social.icon}`} alt={social.alt}/></a>
+                    <a href={`https://www.${social.userProfile}`} target='_blank' key={social.id}><img src={`/static/${social.icon}`} alt={social.alt}/></a>
                     ))}
                 </div>
             </div>
