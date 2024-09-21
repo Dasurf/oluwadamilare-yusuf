@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {Link} from "react-router-dom";
 
 export default function Footer ({socials}) {
   return (
@@ -12,13 +13,13 @@ export default function Footer ({socials}) {
                 <h3>SOCIAL</h3>
                 <div className='link-cont'>
                     {socials.map(social => (
-                    <a href={`https://www.${social.userProfile}`} target='_blank' key={social.id}><img src={`/static/${social.icon}`} alt={social.alt}/></a>
+                    <Link to={`https://www.${social.userProfile}`} target='_blank' key={social.id}><img src={`/static/${social.icon}`} alt={social.alt}/></Link>
                     ))}
                 </div>
             </div>
         </div>
         <div className="lower">
-            © Copyright 2024 . Made by <a href="./Home.jsx">Oluwadamilare Yusuf</a>
+            © Copyright 2024 . Made by <Link to="/home">Oluwadamilare Yusuf</Link>
         </div>
     </footer>
   )

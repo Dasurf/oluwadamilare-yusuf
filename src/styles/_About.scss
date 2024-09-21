@@ -3,16 +3,21 @@
     flex-direction: column;
     padding: 0 0 100px;
     flex-wrap: wrap;
+    margin-top: 100px;
+
+    .section-title {
+        padding-top: 50px;
+    }
 
     .about-details {
         @include displayFlex(space-around, flex-start);
         flex-wrap: wrap;
         gap: 40px;
-        width: 1000px;
+        width: 1200px;
         .know-me {
             @include displayFlex(space-around, flex-start);
             flex-direction: column;
-            width: 400px;
+            width: 450px;
             gap: 25px;
             text-align: justify;
             
@@ -49,7 +54,7 @@
         .my-skills {
             @include displayFlex(center, flex-start);
             flex-direction: column;
-            width: 400px;
+            width: 450px;
             gap: 25px;
             
             // :first-child {
@@ -83,6 +88,10 @@
     .about-cont {
         padding: 7vw;
         flex-direction: column;
+
+        .section-title {
+            padding-top: 0;
+        }
 
         .about-details {
             width: 100%;

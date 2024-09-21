@@ -1,8 +1,18 @@
 import React from 'react'
+import Data from '../Data'
+
+const header = Data.componentHeaders[2];
 
 export default function Contact() {
 	return (
 		<section className='contact-cont'>
+			<div data-aos="zoom-in">
+				<div className="section-title">
+					<h1>{header.title}</h1>
+					<div className="title-design"></div>
+					<p>{header.description}</p>
+				</div>
+			</div>
 			<form className='form' data-aos="fade-in">
 				<label htmlFor="name" data-aos="zoom-in">name</label>
 				<input type="text" placeholder='Please enter your name' data-aos="slide-up"/>

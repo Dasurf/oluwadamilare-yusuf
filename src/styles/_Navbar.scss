@@ -1,121 +1,140 @@
 @import "./variables";
 
 .no-shadow {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 nav {
-    @include displayFlex(space-between, center);
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    background-color: #ebe8e8;
-    width: 100%;
-    padding: 25px 20px;
-    font-family: $fontPoppins;
-    box-shadow: 1px 3px 10px #b7b7b7;
-    z-index: 50;
+  @include displayFlex(space-between, center);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #ebe8e8;
+  width: 100%;
+  padding: 25px 20px;
+  font-family: $fontPoppins;
+  box-shadow: 1px 3px 10px #b7b7b7;
+  z-index: 50;
 
-    a {
-        text-decoration: none;
-        color: #000;
-        font-weight: 900
+  a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 900;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .icon-section {
+    @include displayFlex(space-around, center);
+    gap: 15px;
+
+    img {
+      border-radius: 50%;
     }
 
+    &:hover {
+      color: $primaryColor;
+      transition: 0.1s ease-in-out;
+    }
+  }
+
+  .menu {
+    @include displayFlex(space-around, center);
+    min-width: 400px;
+    gap: 15px;
+
+    li {
+      list-style: none;
+
+      a {
+        @extend a;
+        font-size: small;
+        font-weight: 700;
+
+        &:hover {
+          color: $primaryColor;
+          transition: 0.1s ease-in-out;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
     .mobile {
-        display: none;
+      display: block;
+      cursor: pointer;
+      z-index: 1001; /* Mobile menu toggle always on top */
     }
 
-    .icon-section {
-        @include displayFlex(space-around, center);
-        gap: 15px;
-        
-        img {
-            border-radius: 50%;
+    .menu {
+      display: none; /* Hidden by default on mobile */
+      flex-direction: column;
+      position: absolute;
+      top: 98px;
+      right: 0;
+      width: 100%;
+      background-color: $white;
+      z-index: 1000; /* Make sure mobile menu is above other elements */
+      pointer-events: auto; /* Allow clicking on menu items */
+
+      li {
+        border-bottom: 1px solid #eee;
+        text-align: end;
+        width: 100%;
+        z-index: 999;
+
+        a {
+          flex-direction: column;
+          display: block;
+          width: 100%;
+          padding: 20px 10px;
+          border-bottom: 1px solid #aeaeae;
+
+          &:hover {
+            color: white;
+          }
         }
 
         &:hover {
-            color: $primaryColor;
-            transition: .1s ease-in-out;
+          background-color: $primaryColor;
+          color: $normal-white;
         }
+      }
     }
-    
+
+    .show-menu {
+      display: flex; /* Show menu on mobile when toggled */
+      flex-direction: column;
+      padding: 0 20px;
+      width: 100%;
+      box-shadow: 1px 3px 10px #b7b7b7;
+      z-index: 1000; /* Ensure mobile menu is on top */
+      background-color: $white;
+      pointer-events: auto; /* Enable clicking on the menu */
+    }
+  }
+
+  /* Resetting styles for larger screens */
+  @media only screen and (min-width: 701px) {
     .menu {
-        @include displayFlex(space-around, center);
-        min-width: 400px;
-        gap: 15px;
-
-        li {
-            list-style: none;
-            a {
-                @extend a;
-                font-size: small;
-                font-weight: 700;
-
-                &:hover {
-                    color: $primaryColor;
-                    transition: .1s ease-in-out;
-                }
-            }
-
-        }
+      display: flex !important; /* Always display the menu on large screens */
+      position: relative;
+      flex-direction: row;
+      min-width: 400px;
+      gap: 15px;
+      pointer-events: auto; /* Ensure it's clickable */
+      z-index: 100; /* Lower z-index than the mobile menu */
     }
 
-    @media only screen and (max-width: 700px) {
-        .mobile {
-            display: block;
-        }
-
-        nav {
-            position: relative;
-            padding: 0;
-            box-shadow: 0;
-        }
-
-        .menu {
-            display: none;
-            gap: 0;
-
-            li {
-                border-bottom: 1px solid #eee;
-                text-align: end;
-                width: 100%;
-                
-                a {
-                    flex-direction: column;
-                    display: block;
-                    width: 100%;
-                    padding: 20px 10px;
-                    border-bottom: 1px solid #aeaeae;
-
-                    &:hover {
-                        color: white;
-
-                    }
-                }
-
-                &:hover {
-                    background-color: $primaryColor;
-                    color: $normal-white;
-                }
-            }
-            
-        }
-
-        
-        .show-menu {
-            @include displayFlex(center, space-around);
-            position: absolute;
-            top: 98px;
-            right: 0;
-            flex-direction: column;
-            padding: 0 20px;
-            width: 100%;
-            box-shadow: 1px 3px 10px #b7b7b7;
-            z-index: 999;
-            background-color: $white;
-            
-        }
+    .mobile {
+      display: none; /* Hide mobile menu toggle on large screens */
     }
+
+    .show-menu {
+      display: none; /* Hide mobile-specific menu on large screens */
+    }
+  }
 }

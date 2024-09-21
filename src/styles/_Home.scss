@@ -15,6 +15,10 @@
     gap: 50px;
     text-align: center;
 
+    .section-title {
+        padding-top: 50px;
+    }
+
     .home-btn {
         @extend .home-button;
     }
@@ -29,10 +33,10 @@
             cursor: pointer;
         }
     }
-
+    
     h3 {
         width: 60vw;
-
+        
         &:hover {
             text-shadow: 0 0 30px $white;
             transition: .2s ease;

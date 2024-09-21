@@ -1,19 +1,26 @@
 @import "./About";
 
+.project-umbrella {
+    margin: 100px 0;
+    padding-top: 35px;
+}
+
+
 .project-cont {
     @extend .about-cont;
     @extend .section-title;
-    background-color: $dark-grey;
     color: $white;
-    // width: 1240px;
-    margin: 0 auto;
-    border-radius: 10px;
+    // margin: 0 auto;
+    margin: 0 2%;
     
     
     .project {
         @extend .about-details;
         padding: 50px 0;
         @include displayFlex(space-around, center);
+        border-radius: 10px;
+        background-color: $componentBackground;
+        color: $dark-grey;
 
         .project-image {
             @extend .my-skills;
@@ -28,6 +35,10 @@
 
 @media only screen and (max-width: 700px) {
     .project-cont {
+        
+        .section-title {
+            padding-top: 0;
+        }
         
         .project {
             padding: 20px;

@@ -10,8 +10,7 @@
     .component-style {
         padding: 50px 70px;
         @include displayFlex(center, center);
-        flex-direction: column;
-    
+        margin: 0 auto;
     }
     
     @media only screen and (max-width: 700px) {
@@ -20,6 +19,7 @@
             @include displayFlex(center, center);
             flex-wrap: wrap;
             padding: 5vw;
+            margin-top: 0;
         }
     }
 }

@@ -1,22 +1,19 @@
 import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Aos from 'aos';
 import "aos/dist/aos.css";
 import About from "./pages/About.jsx";
-import Contact from "./pages/Contact.jsx"; 
-import Home from "./pages/Home.jsx"; 
-import Navbar from "./components/Navbar.jsx"; 
-import Projects from "./pages/Projects.jsx"; 
+import Contact from "./pages/Contact.jsx";
+import Home from "./pages/Home.jsx";
+import Navbar from "./components/Navbar.jsx";
+import Projects from "./pages/Projects.jsx";
 import Data from "./Data.jsx";
-import TopDescriptions from './pages/TopDescriptions.jsx';
 import Footer from './components/Footer.jsx';
-
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
+import ScrollToTop from './pages/ScrollToTop.jsx';
 
 export default function App() {
 	const socials = Data.socials;
 	const projects = Data.projects;
-	const componentHeaders = Data.componentHeaders;
 
 	useEffect(() => {
 		Aos.init({
@@ -24,43 +21,25 @@ export default function App() {
 			disable: "phone",
 			duration: 1000,
 			easing: 'ease-out-cubic',
-		})
+		});
 	}, []);
-	
-	let router;
-	
-	
+
 	return (
-		<div className='app'>
-			<Navbar />
-			<Home
-				socials={socials}
-			/>
+		<Router>
+			<div className='app'>
+				<ScrollToTop />
+				<Navbar /> {/* Navbar is outside Routes so it's always visible */}
+				
+				<Routes>
+					<Route path='/' element={<Home socials={socials} />} />
+					<Route path='/home' element={<Home socials={socials} />} />
+					<Route path='/about' element={<About skills={Data.skills} />} />
+					<Route path='/projects' element={<Projects projects={projects} />} />
+					<Route path='/contact' element={<Contact />} />
+				</Routes>
 
-			{[<About 
-				skills={Data.skills}
-			/>,
-			<Projects 
-				projects={projects}
-			/>,
-			<Contact />].map((component, index) => {
-				router = createBrowserRouter([
-					{path: `/${componentHeaders[index].title}`, element: component}
-				])
-
-				return <div key={index} data-aos="slide-up" data-aos-anchor-placement="top center" className={`component-style ${index % 2 === 0 && "component-background"}`}>
-					<TopDescriptions 
-						componentHeaders={componentHeaders}
-						component={component}
-						index={index}
-					/>
-					
-				</div>
-			})}
-			<Footer
-				socials={socials}
-			/>
-		</div>
-	)
+				<Footer socials={socials} />
+			</div>
+		</Router>
+	);
 }
-

@@ -53,7 +53,7 @@ export default {
         {
             id: 2,
             title: "Meme Generator",
-            description: "I created a fun App which fetches random images from the API and create memes by adding texts to it",
+            description: "I created a fun App that fetches random images from the API and create memes by adding texts to it",
             link: "https://meme-generator-zeta-two.vercel.app/",
             image: "meme-generator.jpg",
 
@@ -62,16 +62,19 @@ export default {
     componentHeaders: [
         {
             id: 0,
+            name: "about",
             title: "About Me",
             description: "Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology"
         },
         {
             id: 1,
+            name: "projects",
             title: "Projects",
             description: "Here you will find some of the personal and clients projects that I created with live links to each project"
         },
         {
             id: 2,
+            name: "contact",
             title: "Contact",
             description: "Feel free to Contact me by submitting the form below and I will get back to you as soon as possible"
         }
