@@ -34,7 +34,7 @@ export default function About({skills}) {
 					I'm open to <span className="bold">Job</span>  opportunities where I can contribute, learn and grow. If you have a good 
 					opportunity that matches my skills and experience then don't hesitate to <span className="bold">contact</span> me.
 				</p>
-				<Link className="button" to="./Contact.jsx">CONTACT</Link>
+				<Link className="button" to="/contact">CONTACT</Link>
 			</div>
 			<div className="my-skills" data-aos="slide-left">
 				<h2>My Skills</h2>
