@@ -10,6 +10,7 @@
     }
     
     .form {
+        position: relative;
         @include displayFlex(center, flex-start);
         flex-direction: column;
         padding: 30px;
@@ -30,10 +31,44 @@
             margin-bottom: 30px;
         }
 
+        .message-status {
+            position: absolute;
+            bottom: 350px;
+            right: 30px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+          }
+          
+          .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            width: 300px;
+          }
+          
+          .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+          }
+          
+          /* Simple fade-in animation */
+          @keyframes fadeIn {
+            to {
+              opacity: 1;
+            }
+          }
+          
+
         .contact-btn {
             @extend .home-button;
             align-self: flex-end;
             border: 1px solid $primaryColor;
+            cursor: pointer;
             height: 60px;
             width: 200px;
             font-weight: 500;
