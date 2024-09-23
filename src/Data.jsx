@@ -37,7 +37,7 @@ export default {
         {
             id: 0,
             title: "AM Realty",
-            description: "I worked in a team of two to develop a real estatr website for a client to showcase their juicy offers for potential clients",
+            description: "I worked in a team of two to develop a real estate website for a client to showcase their juicy offers for potential clients",
             link: "https://amrealty.vercel.app/",
             image: "amrealty.jpg",
 
