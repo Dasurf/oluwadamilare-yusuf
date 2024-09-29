@@ -30,7 +30,7 @@ export default function Contact() {
       (error) => {
         setMessageStatus('An error occurred, please try again.');
         setShowMessage(true);   // Show error message
-        hideMessageAfterDelay(); // Hide the message after a short delay
+        // hideMessageAfterDelay(); // Hide the message after a short delay
       }
     );
   };
@@ -79,13 +79,13 @@ export default function Contact() {
 
       <form ref={form} onSubmit={sendEmail} className='form' data-aos="fade-in">
         <label htmlFor="name" data-aos="zoom-in">Name</label>
-        <input type="text" name="name" onChange={handleChange} value={input.name} placeholder='Please enter your name' data-aos="slide-up" required />
+        <input type="text" autoComplete="true" name="name" onChange={handleChange} value={input.name} placeholder='Please enter your name' data-aos="slide-up" required />
 
         <label htmlFor="email" data-aos="zoom-in">Email</label>
-        <input type="email" name="email" onChange={handleChange} value={input.email} placeholder="Please enter your email" data-aos="slide-up" required />
+        <input type="email" autoComplete="true" name="email" onChange={handleChange} value={input.email} placeholder="Please enter your email" data-aos="slide-up" required />
 
         <label htmlFor="message" data-aos="zoom-in">Message</label>
-        <textarea name="message" onChange={handleChange} value={input.message} id="message" cols="150" rows="10" placeholder='Please enter your message' data-aos="slide-up" required></textarea>
+        <textarea name="message" autoComplete="true" onChange={handleChange} value={input.message} id="message" cols="150" rows="10" placeholder='Please enter your message' data-aos="slide-up" required></textarea>
 
 		{/* Conditionally render the status message */}
 		{showMessage && (

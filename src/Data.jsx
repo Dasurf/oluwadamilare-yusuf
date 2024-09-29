@@ -1,5 +1,3 @@
-import { Component } from "react";
-
 export default {
     skills: ["HTML", "CSS", "Javascript", "React", "SASS", "Git", "Github", "Responsive design", "Terminal", "Bash"],
     socials: [

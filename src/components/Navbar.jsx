@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import webIcon from "/static/dasurf.ico";
+import webIcon from "/static/dasurf.jpg";
 import openMenu from "/static/menu.svg";
 import closeMenu from "/static/close.svg";
 
@@ -39,7 +39,7 @@ export default function Navbar() {
   return (
     <nav className={`nav ${isOpen ? "no-shadow" : ""}`}>
       <Link data-aos="zoom-out" className='icon-section' to='/'>
-        <img src={webIcon} alt="nav icon" />
+        <img src={webIcon} width="50px" height="50px" alt="nav icon" />
         <h3>OLUWADAMILARE YUSUF</h3>
       </Link>
       <ul className={`menu ${isOpen ? "show-menu" : ""}`} data-aos={!isOpen && "zoom-out"}>

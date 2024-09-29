@@ -2,6 +2,9 @@ import React from 'react';
 import {Link} from "react-router-dom";
 
 export default function Footer ({socials}) {
+    const date = new Date();
+    const year = date.getFullYear().toString();
+
   return (
     <footer data-aos="zoom-in" className='footer-cont'>
         <div className='upper'>
@@ -19,7 +22,7 @@ export default function Footer ({socials}) {
             </div>
         </div>
         <div className="lower">
-            © Copyright 2024 . Made by <Link to="/home">Oluwadamilare Yusuf</Link>
+            © Copyright {year} . Made by <Link to="/home">Oluwadamilare Yusuf</Link>
         </div>
     </footer>
   )

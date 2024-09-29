@@ -47,18 +47,18 @@ nav {
     gap: 15px;
 
     li {
-      list-style: none;
+        list-style: none;
 
-      a {
-        @extend a;
-        font-size: small;
-        font-weight: 700;
+        a {
+            @extend a;
+            font-size: small;
+            font-weight: 700;
 
-        &:hover {
-          color: $primaryColor;
-          transition: 0.1s ease-in-out;
+            &:hover {
+                color: $primaryColor;
+                transition: 0.1s ease-in-out;
+            }
         }
-      }
     }
   }
 
@@ -79,19 +79,20 @@ nav {
       background-color: $white;
       z-index: 1000; /* Make sure mobile menu is above other elements */
       pointer-events: auto; /* Allow clicking on menu items */
+      gap: 0;
 
       li {
         border-bottom: 1px solid #eee;
         text-align: end;
         width: 100%;
         z-index: 999;
+        border-bottom: 1px solid #aeaeae;
 
         a {
           flex-direction: column;
           display: block;
           width: 100%;
           padding: 20px 10px;
-          border-bottom: 1px solid #aeaeae;
 
           &:hover {
             color: white;

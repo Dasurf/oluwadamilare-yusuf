@@ -57,15 +57,10 @@
             width: 450px;
             gap: 25px;
             
-            // :first-child {
-            //     margin-left: 15px;
-            // }
-            
             .just-skills {
                 @include displayFlex(flex-start, flex-start);
                 flex-wrap: wrap;
                 gap: 10px;
-                // border: 1px solid red;
                 width: 500px;
                 padding: 0;
             }
@@ -74,7 +69,6 @@
                 padding: 7px 10px;
                 background-color: darkgrey;
                 color: $white;
-                // margin: 15px 0 0 15px;
                 border-radius: 3px;
             }
             
