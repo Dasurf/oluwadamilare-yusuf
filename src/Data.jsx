@@ -18,7 +18,7 @@ export default {
 		{
 			id: 2,
 			name: "linkedin",
-			userProfile: "linkedin.com/in/dasurf",
+			userProfile: "linkedin.com/in/damilare-yusuf",
 			icon: "linkedin.png",
 			alt: "linkedin-icon"
 		},
