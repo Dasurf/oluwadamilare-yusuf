@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom'
 import Data from "../Data";
 
-const header = Data.componentHeaders[0]
+const header = Data.componentHeaders[1]
 
 export default function About({skills}) {
 

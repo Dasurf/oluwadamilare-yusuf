@@ -6,7 +6,7 @@ export default function Footer ({socials}) {
     const year = date.getFullYear().toString();
 
   return (
-    <footer data-aos="zoom-in" className='footer-cont'>
+    <footer className='footer-cont'>
         <div className='upper'>
             <div className='name-desc'>
                 <h3>OLUWADAMILARE YUSUF</h3>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Data from '../Data'
 
-const header = Data.componentHeaders[1];
+const header = Data.componentHeaders[2];
 export default function Projects({projects}) {
 	
 

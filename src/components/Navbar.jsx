@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';  // Make sure useLocation is imported
 import webIcon from "/static/dasurf.jpg";
 import openMenu from "/static/menu.svg";
 import closeMenu from "/static/close.svg";
+import Data from '../Data';
 
 export default function Navbar() {
+  const menu = Data.componentHeaders;
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
+
+  const location = useLocation(); // Get the current location
 
   // Toggles the mobile menu open/close
   function toggleMenu() {
@@ -43,10 +47,23 @@ export default function Navbar() {
         <h3>OLUWADAMILARE YUSUF</h3>
       </Link>
       <ul className={`menu ${isOpen ? "show-menu" : ""}`} data-aos={!isOpen && "zoom-out"}>
-        <li><Link to='/home' onClick={handleMenuItemClick}>HOME</Link></li>
-        <li><Link to='/about' onClick={handleMenuItemClick}>ABOUT</Link></li>
-        <li><Link to='/projects' onClick={handleMenuItemClick}>PROJECTS</Link></li>
-        <li><Link to='/contact' onClick={handleMenuItemClick}>CONTACT</Link></li>
+        {
+          menu.map((item) => {
+            const isActive = location.pathname === `/${item.name}`;  // Check if the current path matches the link
+
+            return (
+              <li key={item.id}>
+                <Link 
+                  to={`/${item.name}`} 
+                  onClick={handleMenuItemClick} 
+                  className={isActive ? 'active' : ''} // Apply 'active' class based on the current route
+                >
+                  {item.name.toUpperCase()}
+                </Link>
+              </li>
+            )
+          })
+        }
       </ul>
       {
         isMobile && (

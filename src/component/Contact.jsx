@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import Data from '../Data';
 
-const header = Data.componentHeaders[2];
+const header = Data.componentHeaders[3];
 
 export default function Contact() {
   const form = useRef();

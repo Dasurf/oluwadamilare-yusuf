@@ -2,15 +2,15 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Aos from 'aos';
 import "aos/dist/aos.css";
-import About from "./pages/About.jsx";
-import Contact from "./pages/Contact.jsx";
-import Home from "./pages/Home.jsx";
+import About from "./component/About.jsx";
+import Contact from "./component/Contact.jsx";
+import Home from "./component/Home.jsx";
 import Navbar from "./components/Navbar.jsx";
-import Projects from "./pages/Projects.jsx";
+import Projects from "./component/Projects.jsx";
 import Data from "./Data.jsx";
 import Footer from './components/Footer.jsx';
-import ScrollToTop from './pages/ScrollToTop.jsx';
-import NotFound from './pages/NotFound.jsx';
+import ScrollToTop from './component/ScrollToTop.jsx';
+import NotFound from './component/NotFound.jsx';
 
 export default function App() {
 	const socials = Data.socials;

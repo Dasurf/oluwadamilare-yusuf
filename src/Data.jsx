@@ -60,22 +60,28 @@ export default {
     componentHeaders: [
         {
             id: 0,
+            name: "home",
+            title: "HEY, I'M OLUWADAMILARE YUSUF",
+            description: "A Result-Oriented Web Developer building and managing Websites and Web Applications that leads to the success of the overall product"
+        },
+        {
+            id: 1,
             name: "about",
             title: "About Me",
             description: "Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology"
         },
         {
-            id: 1,
+            id: 2,
             name: "projects",
             title: "Projects",
             description: "Here you will find some of the personal and clients projects that I created with live links to each project"
         },
         {
-            id: 2,
+            id: 3,
             name: "contact",
             title: "Contact",
             description: "Feel free to Contact me by submitting the form below and I will get back to you as soon as possible"
-        }
+        },
 
     ]
 
