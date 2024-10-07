@@ -22,6 +22,7 @@ export default function App() {
 			disable: "phone",
 			duration: 1000,
 			easing: 'ease-out-cubic',
+			mirror: true,
 		});
 	}, []);
 
