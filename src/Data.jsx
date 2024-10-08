@@ -4,7 +4,7 @@ export default {
 		{
 			id: 0,
 			name: "twitter",
-			userProfile: "twitter.com/deezydasurf",
+			userProfile: "twitter.com/thecodeslaw",
 			icon: "twitter.png",
 			alt: "twitter-icon"
 		},
